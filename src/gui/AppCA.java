@@ -202,6 +202,7 @@ public class AppCA extends javax.swing.JFrame {
         btnArbitroActualizar = new javax.swing.JButton();
         btnArbitroEliminar = new javax.swing.JButton();
         btnArbitroCancelar = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         txtLoginPass = new javax.swing.JPasswordField();
         txtLoginUser = new javax.swing.JTextField();
@@ -1306,6 +1307,11 @@ public class AppCA extends javax.swing.JFrame {
         });
 
         btnArbitroEliminar.setText("Eliminar");
+        btnArbitroEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArbitroEliminarActionPerformed(evt);
+            }
+        });
 
         btnArbitroCancelar.setText("Cancelar");
         btnArbitroCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -1397,6 +1403,19 @@ public class AppCA extends javax.swing.JFrame {
         );
 
         jTabbedPane2.addTab("Arbitro", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 667, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 560, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("Club Deportivo", jPanel3);
 
         javax.swing.GroupLayout JFMainLayout = new javax.swing.GroupLayout(JFMain.getContentPane());
         JFMain.getContentPane().setLayout(JFMainLayout);
@@ -2568,8 +2587,27 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_btnArbitroActualizarActionPerformed
 
     private void txtArbitroBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtArbitroBuscarKeyReleased
-        // TODO add your handling code here:
+        try {
+            String filtro = txtArbitroBuscar.getText();
+            List<Arbitro> lista = d.buscarArbitros(filtro);
+            cargarTablaArbitro(lista);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error para buscar: " + e.getMessage());
+        }
     }//GEN-LAST:event_txtArbitroBuscarKeyReleased
+
+    private void btnArbitroEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitroEliminarActionPerformed
+        try {
+            int id=Integer.parseInt(txtArbitroID.getText());
+            d.eliminarArbitro(id);
+            cargarTablaArbitro(d.getArbitros());
+            btnArbitroCancelar.doClick();
+            
+            JOptionPane.showMessageDialog(this, "Arbitro eliminado");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "No se ha podido eliminar arbitro: "+e.getMessage());
+        }
+    }//GEN-LAST:event_btnArbitroEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2707,6 +2745,7 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
