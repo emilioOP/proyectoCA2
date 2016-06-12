@@ -29,6 +29,14 @@ public class Arbitro {
     public Arbitro() {
     }
 
+    public Arbitro(String nombre, String apellido, int edad, String posision, int pais) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.posision = posision;
+        this.pais = pais;
+    }
+
     public String getNombre() {
         return nombre;
     }
