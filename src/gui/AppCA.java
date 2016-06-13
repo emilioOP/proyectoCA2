@@ -1909,7 +1909,7 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_btnPartidoActualizarActionPerformed
 
     private void btnPartidoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartidoCancelarActionPerformed
-tabPartidos.clearSelection();
+        tabPartidos.clearSelection();
         txtPartido_ID.setText(null);
         txtPartidoBusqueda.setText(null);
         cboPartido_SeleccionA.setSelectedIndex(0);
@@ -2069,7 +2069,7 @@ tabPartidos.clearSelection();
     }//GEN-LAST:event_btnActualizarDTActionPerformed
 
     private void btnCancelarDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarDTActionPerformed
-  txtDT_Nombre.setText(null);
+        txtDT_Nombre.setText(null);
         txtDT_Apellido.setText(null);
         txtDT_ID.setText(null);
         txtDT_Sueldo.setText(null);
@@ -2138,7 +2138,7 @@ tabPartidos.clearSelection();
     }//GEN-LAST:event_cboPosicionJugadorActionPerformed
 
     private void btnCancelarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarJugadorActionPerformed
- txtIDJugador.setText(null);
+        txtIDJugador.setText(null);
         txtNombreJugador.setText(null);
         txtApellidoJugador.setText(null);
 
@@ -2393,7 +2393,7 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_btnActualizarCTActionPerformed
 
     private void btnCancelarCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCTActionPerformed
-   txtIDCT.setText(null);
+        txtIDCT.setText(null);
         txtNombreCT.setText(null);
         txtApellidoCT.setText(null);
 
@@ -2461,7 +2461,7 @@ if (evt.getClickCount() == 1) {
                 JOptionPane.showMessageDialog(this, "Datos erroneos. Pruebe nuevamente");
                 txtLoginPass.setText(null);
                 txtLoginUser.setText(null);
-                txtLoginUser.requestFocus();
+//                txtLoginUser.requestFocus();
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "No se ha podido ejecutar login");
@@ -2513,8 +2513,10 @@ if (evt.getClickCount() == 1) {
             d.crearJugador(j);
             JOptionPane.showMessageDialog(this, "Creación exitosa");
             cargarTablaJugadores(d.getJugadores());
-        } catch (Exception e) {
+        } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error al crear Jugador: " + e.getMessage());
+        } catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Indique datos validos");
         }
     }//GEN-LAST:event_btnCrearJugadorActionPerformed
 

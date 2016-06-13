@@ -76,7 +76,7 @@ public class Data {
                 + "'" + p.getHoraTermino() + ":" + p.getMinTermino() + ":0', "
                 + "" + p.getFase() + ""
                 + ");";
-        System.out.println(query);
+//        System.out.println(query);
         c.ejecutar(query);
     }
 
@@ -132,7 +132,7 @@ public class Data {
                 + "" + ct.getSueldoFIFA() + ""
                 + ");";
 
-        System.out.println(query);
+//        System.out.println(query);
         c.ejecutar(query);
     }
 
@@ -156,7 +156,7 @@ public class Data {
                 + "" + j.isHabilitado() + ""
                 + ");";
 
-        System.out.println(query);
+//        System.out.println(query);
         c.ejecutar(query);
 
       
@@ -831,21 +831,21 @@ public class Data {
         partidos = new ArrayList<>();
         Partido p; //adecuar query a formato getPartido
         query = "select*from getPartido where "
-                + "id like '%" + filtro + "%' or "
-                + "idSeleccion1 like '%" + filtro + "%' or "
-                + "idSeleccion2 like '%" + filtro + "%' or "
-                + "arbitro like '%" + filtro + "%' or "
-                + "arbitroL1 like '%" + filtro + "%' or "
-                + "arbitroL2 like '%" + filtro + "%' or "
-                + "cuartoArbitro like '%" + filtro + "%' or "
-                + "estadio like '%" + filtro + "%' or "
-                + "publicoAsistente like '%" + filtro + "%' or "
-                + "fecha like '%" + filtro + "%' or "
-                + "horaInicio like '%" + filtro + "%' or "
-                + "horaTermino like '%" + filtro + "%' or "
-                + "fase like '%" + filtro + "%'"
-                + ";";
-        System.out.println(query);
+                + "idSeleccion1 in (select id from tbl_Pais where tbl_Pais.pais like '%"+filtro+"%') "
+                + "or idSeleccion2 in (select id from tbl_Pais where tbl_Pais.pais like '%"+filtro+"%') "
+                + "or arbitro in (select id from tbl_arbitro where tbl_arbitro.nombre like '%"+filtro+"%' or tbl_arbitro.apellido like '%"+filtro+"%') "
+                + "or arbitroL1 in (select id from tbl_arbitro where tbl_arbitro.nombre like '%"+filtro+"%' or tbl_arbitro.apellido like '%"+filtro+"%') "
+                + "or arbitroL2 in (select id from tbl_arbitro where tbl_arbitro.nombre like '%"+filtro+"%' or tbl_arbitro.apellido like '%"+filtro+"%') "
+                + "or cuartoArbitro in (select id from tbl_arbitro where tbl_arbitro.nombre like '%"+filtro+"%' or tbl_arbitro.apellido like '%"+filtro+"%') "
+                + "or estadio in (select id from tbl_estadio where nombre like '%"+filtro+"%') "
+                + "or Dia like '%"+filtro+"%' "
+                + "or Mes like '%"+filtro+"%' "
+                + "or horaInicio like '%"+filtro+"%' "
+                + "or minInicio like '%"+filtro+"%' "
+                + "or horaTermino like '%"+filtro+"%' "
+                + "or MinTermino like '%"+filtro+"%' "
+                + "or fase like '%"+filtro+"%'";
+//        System.out.println(query);
         rs = c.ejecutarSelect(query);
 
         while (rs.next()) {
@@ -1013,7 +1013,7 @@ public class Data {
         cts = new ArrayList<>();
         CT ct;
         
-        query = "select * from tbl_tblJugador where "
+        query = "select * from tbl_CuerpoTecnico where "
                 + "id like '%" + filtro + "%' or "
                 + "nombre like '%" + filtro + "%' or "
                 + "apellido like '%" + filtro + "%' or "
@@ -1023,7 +1023,9 @@ public class Data {
                 + "aniosComoDT like '%" + filtro + "%' or "
                 + "sueldoFIFA  like '%" + filtro + "%'"
                 + ";";
-
+//        System.out.println(query);
+        rs=c.ejecutarSelect(query);
+        
         while (rs.next()) {
             ct = new CT();
             ct.setId(rs.getInt(1));
