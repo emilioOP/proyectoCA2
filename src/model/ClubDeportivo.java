@@ -16,6 +16,12 @@ public class ClubDeportivo {
     public ClubDeportivo() {
     }
 
+    public ClubDeportivo(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    
+
     public int getId() {
         return id;
     }

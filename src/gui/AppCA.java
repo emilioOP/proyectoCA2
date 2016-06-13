@@ -203,6 +203,18 @@ public class AppCA extends javax.swing.JFrame {
         btnArbitroEliminar = new javax.swing.JButton();
         btnArbitroCancelar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tabClubDeportivo = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        txtClubID = new javax.swing.JTextField();
+        txtClubNombre = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        txtClubBusqueda = new javax.swing.JTextField();
+        btnClubCrear = new javax.swing.JButton();
+        btnClubCancelar = new javax.swing.JButton();
+        btnClubActualizar = new javax.swing.JButton();
+        btnClubEliminar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         txtLoginPass = new javax.swing.JPasswordField();
         txtLoginUser = new javax.swing.JTextField();
@@ -1404,15 +1416,132 @@ public class AppCA extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Arbitro", jPanel2);
 
+        tabClubDeportivo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tabClubDeportivo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                tabClubDeportivoMouseReleased(evt);
+            }
+        });
+        tabClubDeportivo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tabClubDeportivoKeyReleased(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tabClubDeportivo);
+
+        jLabel8.setText("ID");
+
+        jLabel10.setText("Nombre");
+
+        txtClubID.setEditable(false);
+
+        jLabel11.setText("Buscar");
+
+        txtClubBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtClubBusquedaKeyReleased(evt);
+            }
+        });
+
+        btnClubCrear.setText("Crear");
+        btnClubCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClubCrearActionPerformed(evt);
+            }
+        });
+
+        btnClubCancelar.setText("Cancelar");
+        btnClubCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClubCancelarActionPerformed(evt);
+            }
+        });
+
+        btnClubActualizar.setText("Actualizar");
+        btnClubActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClubActualizarActionPerformed(evt);
+            }
+        });
+
+        btnClubEliminar.setText("Eliminar");
+        btnClubEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClubEliminarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 667, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel8))
+                                .addGap(33, 33, 33)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtClubID, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtClubNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(btnClubCrear, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnClubCancelar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnClubActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnClubEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtClubBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 560, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(txtClubBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel10)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtClubID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtClubNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnClubCrear)
+                            .addComponent(btnClubActualizar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnClubCancelar)
+                            .addComponent(btnClubEliminar)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Club Deportivo", jPanel3);
@@ -2510,6 +2639,8 @@ if (evt.getClickCount() == 1) {
             btnArbitroCancelar.setEnabled(false);
             btnArbitroEliminar.setEnabled(false); 
             
+            actualizarCBOsArbitros();
+            
             JOptionPane.showMessageDialog(this, "Arbitro creado!");  
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "No se ha podido crear Arbitro: "+ex.getMessage());
@@ -2576,6 +2707,8 @@ if (evt.getClickCount() == 1) {
             btnArbitroEliminar.setEnabled(false);
 
             tabArbitro.clearSelection();
+            
+            actualizarCBOsArbitros();
 
             JOptionPane.showMessageDialog(this, "Arbitro actualizado");
 
@@ -2601,6 +2734,7 @@ if (evt.getClickCount() == 1) {
             int id=Integer.parseInt(txtArbitroID.getText());
             d.eliminarArbitro(id);
             cargarTablaArbitro(d.getArbitros());
+            actualizarCBOsArbitros();
             btnArbitroCancelar.doClick();
             
             JOptionPane.showMessageDialog(this, "Arbitro eliminado");
@@ -2608,6 +2742,95 @@ if (evt.getClickCount() == 1) {
             JOptionPane.showMessageDialog(this, "No se ha podido eliminar arbitro: "+e.getMessage());
         }
     }//GEN-LAST:event_btnArbitroEliminarActionPerformed
+
+    private void tabClubDeportivoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tabClubDeportivoKeyReleased
+        
+    }//GEN-LAST:event_tabClubDeportivoKeyReleased
+
+    private void tabClubDeportivoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabClubDeportivoMouseReleased
+        try {
+            int fila=tabClubDeportivo.getSelectedRow();
+            int id=(int) tabClubDeportivo.getValueAt(fila, 0);
+            
+            ClubDeportivo club=d.getClubDeportivo(id);
+            txtClubID.setText(Integer.toString(club.getId()));
+            txtClubNombre.setText(club.getNombre());
+            
+            btnClubActualizar.setEnabled(true);
+            btnClubCancelar.setEnabled(true);
+            btnClubEliminar.setEnabled(true);
+            btnClubCrear.setEnabled(false);
+            
+        } catch (SQLException ex) {
+            System.out.println("No se ha podido cargar tabla club");
+        }
+    }//GEN-LAST:event_tabClubDeportivoMouseReleased
+
+    private void btnClubCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClubCancelarActionPerformed
+        txtClubID.setText(null);
+        txtClubNombre.setText(null);
+        tabClubDeportivo.clearSelection();
+        
+        btnClubActualizar.setEnabled(false);
+        btnClubCrear.setEnabled(true);
+        btnClubCancelar.setEnabled(false);
+        btnClubEliminar.setEnabled(false);
+    }//GEN-LAST:event_btnClubCancelarActionPerformed
+
+    private void btnClubCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClubCrearActionPerformed
+        try {
+            String nombre= txtClubNombre.getText();
+            d.crearClubDeportivo(nombre);
+            
+            JOptionPane.showMessageDialog(this, "Se ha creado Club Deportivo");
+            actualizarCBOClubDeportivo();
+            cargarTablaClubDeportivo(d.getClubDeportivos());
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "No se ha podido crear Club");
+        }
+    }//GEN-LAST:event_btnClubCrearActionPerformed
+
+    private void btnClubActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClubActualizarActionPerformed
+        try {
+            int id=Integer.parseInt(txtClubID.getText());
+            String nombre=txtClubNombre.getText();
+            ClubDeportivo club=new ClubDeportivo();
+            club.setId(id);
+            club.setNombre(nombre);
+            
+            d.actualizarClubDeportivo(club);
+            cargarTablaClubDeportivo(d.getClubDeportivos());
+            actualizarCBOClubDeportivo();
+            JOptionPane.showMessageDialog(this, "Se ha actualizaro Club correctamente");
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "No se ha podido actualizar club");
+        }
+    }//GEN-LAST:event_btnClubActualizarActionPerformed
+
+    private void btnClubEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClubEliminarActionPerformed
+        try {
+            int id=Integer.parseInt(txtClubID.getText());
+            d.eliminarClubDeportivo(id);
+            actualizarCBOClubDeportivo();
+            cargarTablaClubDeportivo(d.getClubDeportivos());
+            
+            JOptionPane.showMessageDialog(this, "Se ha eliminado club");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "No se ha podido eliminar Club");
+        }
+    }//GEN-LAST:event_btnClubEliminarActionPerformed
+
+    private void txtClubBusquedaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtClubBusquedaKeyReleased
+        try {
+            String filtro = txtClubBusqueda.getText();
+            List<ClubDeportivo> lista = d.buscarClubDeportivos(filtro);
+            cargarTablaClubDeportivo(lista);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error para buscar: " + e.getMessage());
+        }
+    }//GEN-LAST:event_txtClubBusquedaKeyReleased
 
     /**
      * @param args the command line arguments
@@ -2652,6 +2875,10 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JButton btnCancelarCT;
     private javax.swing.JButton btnCancelarDT;
     private javax.swing.JButton btnCancelarJugador;
+    private javax.swing.JButton btnClubActualizar;
+    private javax.swing.JButton btnClubCancelar;
+    private javax.swing.JButton btnClubCrear;
+    private javax.swing.JButton btnClubEliminar;
     private javax.swing.JButton btnCrearCT;
     private javax.swing.JButton btnCrearDT;
     private javax.swing.JButton btnCrearJugador;
@@ -2683,6 +2910,8 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JCheckBox chkHabilitado;
     private javax.swing.JCheckBox chkTitular;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel39;
@@ -2721,6 +2950,7 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
@@ -2749,6 +2979,7 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
@@ -2777,6 +3008,7 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JSpinner spTarjetasRojas;
     private javax.swing.JTable tabArbitro;
     private javax.swing.JTable tabCT;
+    private javax.swing.JTable tabClubDeportivo;
     private javax.swing.JTable tabDT;
     private javax.swing.JTable tabJugador;
     private javax.swing.JTable tabPartidos;
@@ -2789,6 +3021,9 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JTextField txtBuscarJugador;
     private javax.swing.JTextField txtBusqueda;
     private javax.swing.JTextField txtBusquedaCT;
+    private javax.swing.JTextField txtClubBusqueda;
+    private javax.swing.JTextField txtClubID;
+    private javax.swing.JTextField txtClubNombre;
     private javax.swing.JTextField txtDT_Apellido;
     private javax.swing.JTextField txtDT_ID;
     private javax.swing.JTextField txtDT_Nombre;
@@ -2809,6 +3044,7 @@ if (evt.getClickCount() == 1) {
         cargarComponentesJugador();
         cargarComponentesCT();
         cargarComponentesArbitro();
+        cargarTablaClubDeportivo(d.getClubDeportivos());
     }
 
     private void cargarTablaPartidos(List<Partido> lista) throws SQLException {
@@ -3017,6 +3253,14 @@ if (evt.getClickCount() == 1) {
         tabArbitro.getColumnModel().getColumn(0).setPreferredWidth(5);
         tabArbitro.getColumnModel().getColumn(1).setPreferredWidth(10);
         tabArbitro.getColumnModel().getColumn(2).setPreferredWidth(10);
+    }
+
+    private void cargarTablaClubDeportivo(List <ClubDeportivo> clubes) {
+        TMClub model=new TMClub(clubes);
+        tabClubDeportivo.setModel(model);
+        tabClubDeportivo.getColumnModel().getColumn(0).setPreferredWidth(5);
+        tabClubDeportivo.getColumnModel().getColumn(1).setPreferredWidth(10);
+        btnClubCancelar.doClick();
     }
 
 }
