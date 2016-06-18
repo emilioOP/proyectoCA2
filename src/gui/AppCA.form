@@ -714,7 +714,7 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cbDT_Club" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cbDT_Seleccion" alignment="0" max="32767" attributes="0"/>
                                           <Component id="spDT_Edad" alignment="1" max="32767" attributes="0"/>
                                           <Component id="txtDT_Apellido" alignment="1" max="32767" attributes="0"/>
                                           <Component id="cbDT_Nacionalidad" alignment="1" max="32767" attributes="0"/>
@@ -756,7 +756,7 @@
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel67" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbDT_Club" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="cbDT_Seleccion" alignment="3" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -823,7 +823,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel67">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Club Deportivo"/>
+                        <Property name="text" type="java.lang.String" value="Seleccion"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel68">
@@ -836,7 +836,7 @@
                         <Property name="text" type="java.lang.String" value="Sueldo Fifa"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="cbDT_Club">
+                    <Component class="javax.swing.JComboBox" name="cbDT_Seleccion">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="4">

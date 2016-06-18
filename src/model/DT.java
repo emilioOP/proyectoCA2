@@ -15,7 +15,7 @@ public class DT {
     private String apellido;
     private int edad;
     private int nacionalidad;
-    private int clubDeportivo;
+    private int seleccion;
     private int aniosDT;
     private int sueldoFifa;
 
@@ -28,11 +28,19 @@ public class DT {
         this.apellido = apellido;
         this.edad = edad;
         this.nacionalidad = nacionalidad;
-        this.clubDeportivo = clubDeportivo;
+        this.seleccion = clubDeportivo;
         this.aniosDT = aniosDT;
         this.sueldoFifa = sueldoFifa;
     }
 
+    public int getSeleccion() {
+        return seleccion;
+    }
+
+    public void setSeleccion(int seleccion) {
+        this.seleccion = seleccion;
+    }
+        
     public int getId() {
         return id;
     }
@@ -72,14 +80,6 @@ public class DT {
 
     public void setNacionalidad(int nacionalidad) {
         this.nacionalidad = nacionalidad;
-    }
-
-    public int getClubDeportivo() {
-        return clubDeportivo;
-    }
-
-    public void setClubDeportivo(int clubDeportivo) {
-        this.clubDeportivo = clubDeportivo;
     }
 
     public int getAniosDT() {

@@ -105,7 +105,7 @@ public class AppCA extends javax.swing.JFrame {
         jLabel67 = new javax.swing.JLabel();
         jLabel68 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
-        cbDT_Club = new javax.swing.JComboBox<>();
+        cbDT_Seleccion = new javax.swing.JComboBox<>();
         spDT_Anos = new javax.swing.JSpinner();
         txtDT_Sueldo = new javax.swing.JTextField();
         txtDT_Nombre = new javax.swing.JTextField();
@@ -558,13 +558,13 @@ public class AppCA extends javax.swing.JFrame {
 
         jLabel66.setText("Nacionalidad");
 
-        jLabel67.setText("Club Deportivo");
+        jLabel67.setText("Seleccion");
 
         jLabel68.setText("Años como DT");
 
         jLabel69.setText("Sueldo Fifa");
 
-        cbDT_Club.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbDT_Seleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         txtDT_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -645,7 +645,7 @@ public class AppCA extends javax.swing.JFrame {
                             .addComponent(jLabel67))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbDT_Club, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbDT_Seleccion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(spDT_Edad, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtDT_Apellido, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(cbDT_Nacionalidad, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -677,7 +677,7 @@ public class AppCA extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel67)
-                    .addComponent(cbDT_Club))
+                    .addComponent(cbDT_Seleccion))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel68)
@@ -1969,12 +1969,12 @@ if (evt.getClickCount() == 1) {
                 txtDT_Apellido.setText(dt.getApellido());
                 txtDT_Sueldo.setText(Integer.toString(dt.getSueldoFifa()));
 
-                ClubDeportivo c = d.getClubDeportivo(dt.getClubDeportivo());
-                int indiceCbo = cbDT_Club.getItemCount();
+                Seleccion s = d.getSeleccion(dt.getSeleccion());
+                int indiceCbo = cbDT_Seleccion.getItemCount();
                 for (int i = 0; i < indiceCbo; i++) {
-                    String nombreObj = cbDT_Club.getItemAt(i).toString();
-                    if (nombreObj.equalsIgnoreCase(c.getNombre())) {
-                        cbDT_Club.setSelectedIndex(i);
+                    String nombreObj = cbDT_Seleccion.getItemAt(i).toString();
+                    if (nombreObj.equalsIgnoreCase(s.getPaisStr())) {
+                        cbDT_Seleccion.setSelectedIndex(i);
                     }
                 }
 
@@ -2020,8 +2020,8 @@ if (evt.getClickCount() == 1) {
         nuevoDT.setAniosDT(Integer.parseInt(spDT_Anos.getValue().toString()));
         nuevoDT.setSueldoFifa(Integer.parseInt(txtDT_Sueldo.getText()));
 
-        ClubDeportivo club = (ClubDeportivo) cbDT_Club.getSelectedItem();
-        nuevoDT.setClubDeportivo(club.getId());
+        Seleccion seleccion= (Seleccion) cbDT_Seleccion.getSelectedItem();
+        nuevoDT.setSeleccion(seleccion.getId());
 
         Nacionalidad pais = (Nacionalidad) cbDT_Nacionalidad.getSelectedItem();
         nuevoDT.setNacionalidad(pais.getId());
@@ -2047,12 +2047,13 @@ if (evt.getClickCount() == 1) {
             int edad = Integer.parseInt(spDT_Edad.getValue().toString());
             int anosDT = Integer.parseInt(spDT_Anos.getValue().toString());
 
-            ClubDeportivo club = (ClubDeportivo) cbDT_Club.getSelectedItem();
-            int idClub = club.getId();
+            Seleccion seleccion = (Seleccion) cbDT_Seleccion.getSelectedItem();
+            int idSeleccion = seleccion.getId();
+            
             Nacionalidad pais = (Nacionalidad) cbDT_Nacionalidad.getSelectedItem();
             int idNacion = pais.getId();
 
-            DT dt = new DT(id, nombre, apellido, edad, idNacion, idClub, anosDT, sueldo);
+            DT dt = new DT(id, nombre, apellido, edad, idNacion, idSeleccion, anosDT, sueldo);
             d.actualizarDT(dt);
             cargarTablaDT(d.getDTs());
             btnCancelarDT.doClick();
@@ -2075,7 +2076,7 @@ if (evt.getClickCount() == 1) {
         txtDT_Sueldo.setText(null);
         spDT_Anos.setValue(0);
         spDT_Edad.setValue(0);
-        cbDT_Club.setSelectedIndex(0);
+        cbDT_Seleccion.setSelectedIndex(0);
         cbDT_Nacionalidad.setSelectedIndex(0);
         tabDT.clearSelection();
         btnActualizarDT.setEnabled(false);
@@ -2892,8 +2893,8 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JButton btnPartidoCancelar;
     private javax.swing.JButton btnPartidoEliminar;
     private javax.swing.JButton btnPartido_Crear;
-    private javax.swing.JComboBox<Object> cbDT_Club;
     private javax.swing.JComboBox<Object> cbDT_Nacionalidad;
+    private javax.swing.JComboBox<Object> cbDT_Seleccion;
     private javax.swing.JComboBox<Object> cboArbitroPais;
     private javax.swing.JComboBox<Object> cboClubDeportivoCT;
     private javax.swing.JComboBox<Object> cboClubDeportivoJugador;
@@ -3088,15 +3089,13 @@ if (evt.getClickCount() == 1) {
     private void actualizarCBOClubDeportivo() {
         try {
             List<ClubDeportivo> clubes = d.getClubDeportivos();
-            cbDT_Club.removeAllItems();
             cboClubDeportivoCT.removeAllItems();
             cboClubDeportivoJugador.removeAllItems();
 
-            cbDT_Club.addItem("Seleccione club deportivo...");
             cboClubDeportivoCT.addItem("Seleccione club deportivo...");
             cboClubDeportivoJugador.addItem("Seleccione club deportivo...");
             for (ClubDeportivo club : clubes) {
-                cbDT_Club.addItem(club);
+                
                 cboClubDeportivoCT.addItem(club);
                 cboClubDeportivoJugador.addItem(club);
             }
@@ -3126,14 +3125,15 @@ if (evt.getClickCount() == 1) {
             List<Seleccion> selecciones = d.getSelecciones();
             cboPartido_SeleccionA.removeAllItems();
             cboPartido_SeleccionB.removeAllItems();
-
+            cbDT_Seleccion.removeAllItems();
+            
+            cbDT_Seleccion.addItem("Seleccione seleccion...");
             cboPartido_SeleccionA.addItem("Seleccione seleccion...");
+            cboPartido_SeleccionB.addItem("Seleccione seleccion...");
+            
             for (Seleccion s : selecciones) {
                 cboPartido_SeleccionA.addItem(s);
-            }
-
-            cboPartido_SeleccionB.addItem("Seleccione seleccion...");
-            for (Seleccion s : selecciones) {
+                cbDT_Seleccion.addItem(s);
                 cboPartido_SeleccionB.addItem(s);
             }
 

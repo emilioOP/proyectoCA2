@@ -86,7 +86,7 @@ public class Data {
                 + "'" + dt.getApellido() + "',"
                 + "" + dt.getEdad() + ","
                 + "" + dt.getNacionalidad() + ","
-                + "" + dt.getClubDeportivo() + ","
+                + "" + dt.getSeleccion() + ","
                 + "" + dt.getAniosDT() + ","
                 + "" + dt.getSueldoFifa() + ""
                 + ");";
@@ -227,7 +227,7 @@ public class Data {
                 + "apellido='" + dt.getApellido() + "', "
                 + "edad=" + dt.getEdad() + " , "
                 + "nacionalidad=" + dt.getNacionalidad() + ", "
-                + "clubDeportivo=" + dt.getClubDeportivo() + ", "
+                + "clubDeportivo=" + dt.getSeleccion() + ", "
                 + "aniosComoDT=" + dt.getAniosDT() + ", "
                 + "sueldoFIFA=" + dt.getSueldoFifa() + " "
                 + "where id=" + dt.getId() + ";";
@@ -342,7 +342,7 @@ public class Data {
             dt.setApellido(rs.getString(3));
             dt.setEdad(rs.getInt(4));
             dt.setNacionalidad(rs.getInt(5));
-            dt.setClubDeportivo(rs.getInt(6));
+            dt.setSeleccion(rs.getInt(6));
             dt.setAniosDT(rs.getInt(7));
             dt.setSueldoFifa(rs.getInt(8));
         }
@@ -596,7 +596,7 @@ public class Data {
             dt.setApellido(rs.getString(3));
             dt.setEdad(rs.getInt(4));
             dt.setNacionalidad(rs.getInt(5));
-            dt.setClubDeportivo(rs.getInt(6));
+            dt.setSeleccion(rs.getInt(6));
             dt.setAniosDT(rs.getInt(7));
             dt.setSueldoFifa(rs.getInt(8));
             dts.add(dt);
@@ -897,7 +897,7 @@ public class Data {
             dt.setApellido(rs.getString(3));
             dt.setEdad(rs.getInt(4));
             dt.setNacionalidad(rs.getInt(5));
-            dt.setClubDeportivo(rs.getInt(6));
+            dt.setSeleccion(rs.getInt(6));
             dt.setAniosDT(rs.getInt(7));
             dt.setSueldoFifa(rs.getInt(8));
             dts.add(dt);
