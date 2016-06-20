@@ -1,9 +1,6 @@
 BD
 --------------------------------------------------------------------------------------------------
-manejo excepciones		bloquear numeros negativos para los spinner 
-                                (establecer minimo de edad para los dt, jugadores, etc)
-
-areglar bugs:			checkbox jugador-> transformarlo a un radiobutton				
+modificar componentes:		checkbox jugador-> transformarlo a un radiobutton				
 
 agregar curd restantes: 	tbl_estadio
 		  		tbl_usuario

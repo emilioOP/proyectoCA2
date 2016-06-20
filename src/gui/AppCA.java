@@ -88,6 +88,7 @@ public class AppCA extends javax.swing.JFrame {
         spPartido_Mes = new javax.swing.JSpinner();
         jLabel51 = new javax.swing.JLabel();
         cboPartido_Fase = new javax.swing.JComboBox<>();
+        jSpinner1 = new javax.swing.JSpinner();
         jLabel52 = new javax.swing.JLabel();
         txtPartidoBusqueda = new javax.swing.JTextField();
         jPanel11 = new javax.swing.JPanel();
@@ -341,6 +342,8 @@ public class AppCA extends javax.swing.JFrame {
 
         cboPartido_Fase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jSpinner1.setModel(new javax.swing.SpinnerDateModel());
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -348,6 +351,14 @@ public class AppCA extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(btnPartidoCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPartidoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addComponent(btnPartido_Crear, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPartidoActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel39)
@@ -360,11 +371,12 @@ public class AppCA extends javax.swing.JFrame {
                             .addComponent(jLabel46)
                             .addComponent(jLabel48)
                             .addComponent(jLabel47)
+                            .addComponent(jLabel51)
                             .addComponent(jLabel49)
-                            .addComponent(jLabel50)
-                            .addComponent(jLabel51))
+                            .addComponent(jLabel50))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(cboPartido_Estadio, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cboPartido_Fase, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
@@ -374,33 +386,26 @@ public class AppCA extends javax.swing.JFrame {
                                     .addComponent(cboPartido_SeleccionB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(spPartido_Publico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtPartido_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel8Layout.createSequentialGroup()
                                         .addComponent(spPartido_InicioHora, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(spPartido_InicioMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel8Layout.createSequentialGroup()
-                                        .addComponent(spPartido_Dia, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(spPartido_Mes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(cboPartido_ArbitroD, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cboPartido_ArbitroLB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cboPartido_ArbitroLA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cboPartido_ArbitroA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel8Layout.createSequentialGroup()
                                         .addComponent(spPartido_TerminoHora, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(spPartido_TerminoMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(btnPartidoCancelar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPartidoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(btnPartido_Crear, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPartidoActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(spPartido_TerminoMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtPartido_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel8Layout.createSequentialGroup()
+                                            .addComponent(spPartido_Dia, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(spPartido_Mes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(cboPartido_ArbitroD, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cboPartido_ArbitroLB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cboPartido_ArbitroLA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cboPartido_ArbitroA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -450,28 +455,34 @@ public class AppCA extends javax.swing.JFrame {
                     .addComponent(spPartido_Mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(spPartido_InicioHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spPartido_InicioMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel49))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(spPartido_TerminoHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spPartido_TerminoMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel50))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel49)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spPartido_InicioHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spPartido_InicioMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spPartido_TerminoHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spPartido_TerminoMinuto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cboPartido_Fase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel51))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPartido_Crear)
                     .addComponent(btnPartidoActualizar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPartidoCancelar)
                     .addComponent(btnPartidoEliminar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel52.setText("Busqueda");
@@ -507,10 +518,10 @@ public class AppCA extends javax.swing.JFrame {
                     .addComponent(jLabel52)
                     .addComponent(txtPartidoBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Partidos", jPanel7);
@@ -556,15 +567,19 @@ public class AppCA extends javax.swing.JFrame {
 
         jLabel65.setText("Edad");
 
+        spDT_Edad.setModel(new javax.swing.SpinnerNumberModel(30, 30, null, 1));
+
         jLabel66.setText("Nacionalidad");
 
         jLabel67.setText("Seleccion");
 
         jLabel68.setText("Años como DT");
 
-        jLabel69.setText("Sueldo Fifa");
+        jLabel69.setText("Sueldo Fifa(CPL)");
 
         cbDT_Seleccion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        spDT_Anos.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         txtDT_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -774,6 +789,8 @@ public class AppCA extends javax.swing.JFrame {
         jLabel81.setText("Sueldo:");
 
         txtIDJugador.setEnabled(false);
+
+        spEdadJugador.setModel(new javax.swing.SpinnerNumberModel(20, 20, null, 1));
 
         jLabel82.setText("Posición:");
 
@@ -1069,6 +1086,8 @@ public class AppCA extends javax.swing.JFrame {
 
         jLabel89.setText("Edad");
 
+        spEdadCT.setModel(new javax.swing.SpinnerNumberModel(30, 30, null, 1));
+
         jLabel90.setText("Nacionalidad");
 
         jLabel91.setText("Club Deportivo");
@@ -1078,6 +1097,8 @@ public class AppCA extends javax.swing.JFrame {
         jLabel93.setText("Sueldo FIFA");
 
         cboClubDeportivoCT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        spAniosCT.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         txtNombreCT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1117,6 +1138,8 @@ public class AppCA extends javax.swing.JFrame {
                 btnEliminarCTActionPerformed(evt);
             }
         });
+
+        spSueldoCT.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -1285,6 +1308,8 @@ public class AppCA extends javax.swing.JFrame {
         });
 
         cboArbitroPais.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        spArbitroEdad.setModel(new javax.swing.SpinnerNumberModel(30, 30, null, 1));
 
         tabArbitro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2013,20 +2038,19 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_txtDT_NombreActionPerformed
 
     private void btnCrearDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearDTActionPerformed
-        DT nuevoDT = new DT();
-        nuevoDT.setNombre(txtDT_Nombre.getText());
-        nuevoDT.setApellido(txtDT_Apellido.getText());
-        nuevoDT.setEdad(Integer.parseInt(spDT_Edad.getValue().toString()));
-        nuevoDT.setAniosDT(Integer.parseInt(spDT_Anos.getValue().toString()));
-        nuevoDT.setSueldoFifa(Integer.parseInt(txtDT_Sueldo.getText()));
-
-        Seleccion seleccion= (Seleccion) cbDT_Seleccion.getSelectedItem();
-        nuevoDT.setSeleccion(seleccion.getId());
-
-        Nacionalidad pais = (Nacionalidad) cbDT_Nacionalidad.getSelectedItem();
-        nuevoDT.setNacionalidad(pais.getId());
-
         try {
+            DT nuevoDT = new DT();
+            nuevoDT.setNombre(txtDT_Nombre.getText());
+            nuevoDT.setApellido(txtDT_Apellido.getText());
+            nuevoDT.setEdad(Integer.parseInt(spDT_Edad.getValue().toString()));
+            nuevoDT.setAniosDT(Integer.parseInt(spDT_Anos.getValue().toString()));
+            nuevoDT.setSueldoFifa(Integer.parseInt(txtDT_Sueldo.getText()));
+
+            Seleccion seleccion = (Seleccion) cbDT_Seleccion.getSelectedItem();
+            nuevoDT.setSeleccion(seleccion.getId());
+
+            Nacionalidad pais = (Nacionalidad) cbDT_Nacionalidad.getSelectedItem();
+            nuevoDT.setNacionalidad(pais.getId());
             d.crearDT(nuevoDT);
             JOptionPane.showMessageDialog(this, "DT Creado");
             btnCancelarDT.doClick();
@@ -2070,22 +2094,19 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_btnActualizarDTActionPerformed
 
     private void btnCancelarDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarDTActionPerformed
-        txtDT_Nombre.setText(null);
-        txtDT_Apellido.setText(null);
-        txtDT_ID.setText(null);
-        txtDT_Sueldo.setText(null);
-        spDT_Anos.setValue(0);
-        spDT_Edad.setValue(0);
-        cbDT_Seleccion.setSelectedIndex(0);
-        cbDT_Nacionalidad.setSelectedIndex(0);
-        tabDT.clearSelection();
-        btnActualizarDT.setEnabled(false);
-        btnCancelarDT.setEnabled(false);
-        btnCrearDT.setEnabled(true);
-        btnEliminarDT.setEnabled(false);
-
-
-
+            txtDT_Nombre.setText(null);
+            txtDT_Apellido.setText(null);
+            txtDT_ID.setText(null);
+            txtDT_Sueldo.setText(null);
+            spDT_Anos.setValue(1);
+            spDT_Edad.setValue(30);
+            cbDT_Seleccion.setSelectedIndex(0);
+            cbDT_Nacionalidad.setSelectedIndex(0);
+            tabDT.clearSelection();
+            btnActualizarDT.setEnabled(false);
+            btnCancelarDT.setEnabled(false);
+            btnCrearDT.setEnabled(true);
+            btnEliminarDT.setEnabled(false);
     }//GEN-LAST:event_btnCancelarDTActionPerformed
 
     private void btnEliminarDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDTActionPerformed
@@ -2143,7 +2164,7 @@ if (evt.getClickCount() == 1) {
         txtNombreJugador.setText(null);
         txtApellidoJugador.setText(null);
 
-        spEdadJugador.setValue(0);
+        spEdadJugador.setValue(20);
         spDebutJugador.setValue(0);
         spSueldoJugador.setValue(0);
         spGolesJugador.setValue(0);
@@ -2336,20 +2357,19 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_txtNombreCTActionPerformed
 
     private void btnCrearCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCTActionPerformed
-        CT nuevoCT = new CT();
-        nuevoCT.setNombre(txtNombreCT.getText());
-        nuevoCT.setApellido(txtApellidoCT.getText());
-        nuevoCT.setEdad(Integer.parseInt(spEdadCT.getValue().toString()));
-        nuevoCT.setAniosComoDT(Integer.parseInt(spAniosCT.getValue().toString()));
-        nuevoCT.setSueldoFIFA(Integer.parseInt(spSueldoCT.getValue().toString()));
-
-        ClubDeportivo club = (ClubDeportivo) cboClubDeportivoCT.getSelectedItem();
-        nuevoCT.setClubDeportivo(club.getId());
-
-        Nacionalidad pais = (Nacionalidad) cboNacionalidadCT.getSelectedItem();
-        nuevoCT.setNacionalidad(pais.getId());
-
         try {
+            CT nuevoCT = new CT();
+            nuevoCT.setNombre(txtNombreCT.getText());
+            nuevoCT.setApellido(txtApellidoCT.getText());
+            nuevoCT.setEdad(Integer.parseInt(spEdadCT.getValue().toString()));
+            nuevoCT.setAniosComoDT(Integer.parseInt(spAniosCT.getValue().toString()));
+            nuevoCT.setSueldoFIFA(Integer.parseInt(spSueldoCT.getValue().toString()));
+
+            ClubDeportivo club = (ClubDeportivo) cboClubDeportivoCT.getSelectedItem();
+            nuevoCT.setClubDeportivo(club.getId());
+
+            Nacionalidad pais = (Nacionalidad) cboNacionalidadCT.getSelectedItem();
+            nuevoCT.setNacionalidad(pais.getId());
             d.crearCT(nuevoCT);
             JOptionPane.showMessageDialog(this, "CT Creado");
             btnCancelarCT.doClick();
@@ -2358,10 +2378,9 @@ if (evt.getClickCount() == 1) {
             JOptionPane.showMessageDialog(this, "No se ha podido crear CT: " + ex.getMessage());
         } catch (NumberFormatException exx) {
             JOptionPane.showMessageDialog(this, "Existen datos invalidos");
+        } catch(ClassCastException e){
+            JOptionPane.showMessageDialog(this, "Verifique datos");
         }
-
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnCrearCTActionPerformed
 
     private void btnActualizarCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarCTActionPerformed
@@ -2399,8 +2418,8 @@ if (evt.getClickCount() == 1) {
         txtApellidoCT.setText(null);
 
         spSueldoCT.setValue(0);
-        spAniosCT.setValue(0);
-        spEdadCT.setValue(0);
+        spAniosCT.setValue(1);
+        spEdadCT.setValue(30);
 
         cboClubDeportivoCT.setSelectedIndex(0);
         cboNacionalidadCT.setSelectedIndex(0);
@@ -2470,54 +2489,55 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     private void btnCrearJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearJugadorActionPerformed
-        Jugador j;
-        Object posicion = cboPosicionJugador.getSelectedItem();
-        Object nacionalidad = cboNacionalidadJugador.getSelectedItem();
-        Object clubDeportivo = cboClubDeportivoJugador.getSelectedItem();
-        Object estadoFisico = cboEstadoFisicoJugador.getSelectedItem();
-
-        Posicion p = (Posicion) posicion;
-        Nacionalidad n = (Nacionalidad) nacionalidad;
-        ClubDeportivo cd = (ClubDeportivo) clubDeportivo;
-        EstadoFisico ef = (EstadoFisico) estadoFisico;
-
-        j = new Jugador();
-//        j.setId(Integer.parseInt(txtIDJugador.getText()));
-        j.setNombre(txtNombreJugador.getText());
-        j.setApellido(txtApellidoJugador.getText());
-        j.setEdad(Integer.parseInt(spEdadJugador.getValue().toString()));
-        j.setNacionalidad(n.getId());
-        j.setClubDeportivo(cd.getId());
-        j.setEstadoFisico(ef.getId());
-
-        if (chkTitular.isSelected()) {
-            j.setTitular(1);
-        } else {
-            j.setTitular(0);
-        }
-        j.setPosicion(p.getId());
-        j.setNroCamiseta(Integer.parseInt("1"));
-        j.setAniosComoJugador(Integer.parseInt(spDebutJugador.getValue().toString()));
-        j.setGoles(Integer.parseInt(spGolesJugador.getValue().toString()));
-        j.setAtajadas(Integer.parseInt(spAtajadasJugador.getValue().toString()));
-        j.setSueldoFIFA(Integer.parseInt(spSueldoJugador.getValue().toString()));
-        j.setTarjetasRojas(Integer.parseInt(spTarjetasRojas.getValue().toString()));
-        j.setTarjetasAmarillas(Integer.parseInt(spTarjetasRojas.getValue().toString()));
-
-        if (chkHabilitado.isSelected()) {
-            j.setHabilitado(1);
-        } else {
-            j.setHabilitado(0);
-        }
-
         try {
+            Jugador j;
+            Object posicion = cboPosicionJugador.getSelectedItem();
+            Object nacionalidad = cboNacionalidadJugador.getSelectedItem();
+            Object clubDeportivo = cboClubDeportivoJugador.getSelectedItem();
+            Object estadoFisico = cboEstadoFisicoJugador.getSelectedItem();
+
+            Posicion p = (Posicion) posicion;
+            Nacionalidad n = (Nacionalidad) nacionalidad;
+            ClubDeportivo cd = (ClubDeportivo) clubDeportivo;
+            EstadoFisico ef = (EstadoFisico) estadoFisico;
+
+            j = new Jugador();
+//        j.setId(Integer.parseInt(txtIDJugador.getText()));
+            j.setNombre(txtNombreJugador.getText());
+            j.setApellido(txtApellidoJugador.getText());
+            j.setEdad(Integer.parseInt(spEdadJugador.getValue().toString()));
+            j.setNacionalidad(n.getId());
+            j.setClubDeportivo(cd.getId());
+            j.setEstadoFisico(ef.getId());
+
+            if (chkTitular.isSelected()) {
+                j.setTitular(1);
+            } else {
+                j.setTitular(0);
+            }
+            j.setPosicion(p.getId());
+            j.setNroCamiseta(Integer.parseInt("1"));
+            j.setAniosComoJugador(Integer.parseInt(spDebutJugador.getValue().toString()));
+            j.setGoles(Integer.parseInt(spGolesJugador.getValue().toString()));
+            j.setAtajadas(Integer.parseInt(spAtajadasJugador.getValue().toString()));
+            j.setSueldoFIFA(Integer.parseInt(spSueldoJugador.getValue().toString()));
+            j.setTarjetasRojas(Integer.parseInt(spTarjetasRojas.getValue().toString()));
+            j.setTarjetasAmarillas(Integer.parseInt(spTarjetasRojas.getValue().toString()));
+
+            if (chkHabilitado.isSelected()) {
+                j.setHabilitado(1);
+            } else {
+                j.setHabilitado(0);
+            }
             d.crearJugador(j);
             JOptionPane.showMessageDialog(this, "Creación exitosa");
             cargarTablaJugadores(d.getJugadores());
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error al crear Jugador: " + e.getMessage());
-        } catch (NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Indique datos validos");
+        } catch(ClassCastException exx){
+            JOptionPane.showMessageDialog(this, "Verifique datos");
         }
     }//GEN-LAST:event_btnCrearJugadorActionPerformed
 
@@ -2608,6 +2628,7 @@ if (evt.getClickCount() == 1) {
         txtArbitroApellid.setText(null);
         txtArbitroBuscar.setText(null);
         cboArbitroPais.setSelectedIndex(0);
+        spArbitroEdad.setValue(30);
         
         btnArbitroActualizar.setEnabled(false);
         btnArbitroCrear.setEnabled(true);
@@ -2618,17 +2639,16 @@ if (evt.getClickCount() == 1) {
     }//GEN-LAST:event_btnArbitroCancelarActionPerformed
 
     private void btnArbitroCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitroCrearActionPerformed
-        String nombre=txtArbitroNombre.getText();
-        String apellido=txtArbitroApellid.getText();
-        int edad=(int)spArbitroEdad.getValue();
-        
-        Nacionalidad n=(Nacionalidad)cboArbitroPais.getSelectedItem();
-        int pais=n.getId();
-        
-        Arbitro a=new Arbitro(nombre, apellido, edad, null, pais);
-        
         try {
-            d.crearArbitro(a);                      
+            String nombre = txtArbitroNombre.getText();
+            String apellido = txtArbitroApellid.getText();
+            int edad = (int) spArbitroEdad.getValue();
+
+            Nacionalidad n = (Nacionalidad) cboArbitroPais.getSelectedItem();
+            int pais = n.getId();
+
+            Arbitro a = new Arbitro(nombre, apellido, edad, null, pais);
+            d.crearArbitro(a);
             cargarTablaArbitro(d.getArbitros());
 
             txtArbitroID.setText(null);
@@ -2640,14 +2660,14 @@ if (evt.getClickCount() == 1) {
             btnArbitroActualizar.setEnabled(false);
             btnArbitroCrear.setEnabled(true);
             btnArbitroCancelar.setEnabled(false);
-            btnArbitroEliminar.setEnabled(false); 
-            
+            btnArbitroEliminar.setEnabled(false);
+
             actualizarCBOsArbitros();
-            
-            JOptionPane.showMessageDialog(this, "Arbitro creado!");  
+
+            JOptionPane.showMessageDialog(this, "Arbitro creado!");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "No se ha podido crear Arbitro: "+ex.getMessage());
-        } catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "No se ha podido crear Arbitro: " + ex.getMessage());
+        } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Indice solo numeros donde corresponde");
         }
     }//GEN-LAST:event_btnArbitroCrearActionPerformed
@@ -2988,6 +3008,7 @@ if (evt.getClickCount() == 1) {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JSpinner spAniosCT;
     private javax.swing.JSpinner spArbitroEdad;

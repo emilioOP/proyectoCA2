@@ -73,11 +73,11 @@
                               <Component id="txtPartidoBusqueda" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jPanel8" max="32767" attributes="0"/>
-                              <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane4" min="-2" pref="423" max="-2" attributes="0"/>
+                              <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="21" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -122,6 +122,16 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="btnPartidoCancelar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="btnPartidoEliminar" min="-2" pref="83" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="btnPartido_Crear" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="btnPartidoActualizar" min="-2" pref="83" max="-2" attributes="0"/>
+                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -134,12 +144,13 @@
                                           <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel48" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel47" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel51" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel49" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel50" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel51" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jSpinner1" alignment="1" max="32767" attributes="0"/>
                                           <Component id="cboPartido_Estadio" alignment="0" max="32767" attributes="0"/>
                                           <Component id="cboPartido_Fase" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
@@ -150,42 +161,34 @@
                                                   <Component id="spPartido_Publico" alignment="1" min="-2" pref="111" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="txtPartido_ID" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="spPartido_InicioHora" min="-2" pref="41" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="spPartido_InicioMinuto" min="-2" pref="40" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="spPartido_Dia" min="-2" pref="41" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="spPartido_Mes" min="-2" pref="64" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="cboPartido_ArbitroD" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="cboPartido_ArbitroLB" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="cboPartido_ArbitroLA" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="cboPartido_ArbitroA" alignment="0" max="32767" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
                                                       <Component id="spPartido_TerminoHora" min="-2" pref="41" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="spPartido_TerminoMinuto" min="-2" pref="40" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="txtPartido_ID" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="spPartido_Dia" min="-2" pref="41" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="spPartido_Mes" min="-2" pref="64" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="cboPartido_ArbitroD" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="cboPartido_ArbitroLB" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="cboPartido_ArbitroLA" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="cboPartido_ArbitroA" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="btnPartidoCancelar" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnPartidoEliminar" min="-2" pref="83" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnPartido_Crear" min="-2" pref="75" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnPartidoActualizar" min="-2" pref="83" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -251,33 +254,42 @@
                                   <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="spPartido_InicioHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spPartido_InicioMinuto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="spPartido_InicioHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spPartido_InicioMinuto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="spPartido_TerminoHora" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spPartido_TerminoMinuto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="spPartido_TerminoHora" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spPartido_TerminoMinuto" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="cboPartido_Fase" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel51" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btnPartido_Crear" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnPartidoActualizar" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btnPartidoCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnPartidoEliminar" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -563,6 +575,13 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Object&gt;"/>
                       </AuxValues>
                     </Component>
+                    <Component class="javax.swing.JSpinner" name="jSpinner1">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="now" stepSize="5" type="date"/>
+                        </Property>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Component class="javax.swing.JLabel" name="jLabel52">
@@ -815,6 +834,11 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spDT_Edad">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="30" minimum="30" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel66">
                       <Properties>
@@ -833,7 +857,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel69">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Sueldo Fifa"/>
+                        <Property name="text" type="java.lang.String" value="Sueldo Fifa(CPL)"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="cbDT_Seleccion">
@@ -852,6 +876,11 @@
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spDT_Anos">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtDT_Sueldo">
                     </Component>
@@ -1228,6 +1257,11 @@
                     <Component class="javax.swing.JTextField" name="txtApellidoJugador">
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spEdadJugador">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="20" minimum="20" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spDebutJugador">
                     </Component>
@@ -1637,6 +1671,11 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spEdadCT">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="30" minimum="30" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel90">
                       <Properties>
@@ -1674,6 +1713,11 @@
                       </AuxValues>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spAniosCT">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtNombreCT">
                       <Events>
@@ -1731,6 +1775,11 @@
                       </Events>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="spSueldoCT">
+                      <Properties>
+                        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                          <SpinnerModel initial="1" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                        </Property>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1926,6 +1975,11 @@
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="spArbitroEdad">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="30" minimum="30" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane1">
                   <AuxValues>
